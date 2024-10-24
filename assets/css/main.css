@@ -2339,7 +2339,7 @@ button,
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #1e2124;
+  color: #0f1012;
   font-family: "Lora", serif;
   font-weight: 400;
   letter-spacing: 0.075em;
@@ -2380,7 +2380,7 @@ button,
         -webkit-transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
         -ms-transition: color 0.2s ease-in-out, -ms-transform 0.2s ease-in-out;
         transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-        color: #9fa3a6;
+        color: #3d3e40;
         content: '\f078';
         position: absolute;
         right: 0; }
