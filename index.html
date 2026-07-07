@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>patryk koch | graphic design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<meta property="og:title" content="patryk koch | graphic design" />
+<meta property="og:description" content="Patryk Koch Portfolio" />
+<meta property="og:image" content="https://patrykkoch.github.io/images/patryk.png" />
+<meta property="og:url" content="https://patrykkoch.github.io" />
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-group">
+    <h1 class="logo">
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Patryk Koch">
+      </a>
+    </h1>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/patryk-koch/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://www.instagram.com/koch_analog/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+<main>
+
+  <div class="text contact-bar">
+    <p class="contact-info"><a class="cv"href="CV-Patryk-Koch.pdf" target="_blank">Download CV</a> | <a class="mail"href="mailto:patrykkochgyo@gmail.com">patrykkochgyo@gmail.com</a> | <a class="mail" href="tel:+48781701352">(+48) 781 701 352</a></p>
+  </div>
+
+<section class="hero">
+    <div class="hero-left">
+      <h2 class="hero-heading">
+        <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-bio">Hi, I'm Patryk Koch, a graphic designer at the Polish Press Agency. I create editorial illustrations, web design projects, event visuals, animations, infographics and smaller print projects. My work includes over 50 cover illustrations for Dziennik Gazeta Prawna. In 2026, one of my covers received 2nd place in <a class="award-link" href="https://wirtuale.wirtualnemedia.pl/" target="_blank" rel="noopener noreferrer">the Wirtuale Awards<svg class="award-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a> for Best Cover Illustration of the Year.</p>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <img src="images/photo.jpg" alt="Patryk Koch">
+      </div>
+      <svg class="spin-ring" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="circle-path" d="M 150,150 m -108,0 a 108,108 0 1,1 216,0 a 108,108 0 1,1 -216,0"/>
+        </defs>
+        <text class="spin-text">
+          <textPath href="#circle-path" startOffset="0%">
+            EDITORIAL ✦ WEB DESIGN ✦ ILLUSTRASTIONS ✦ EVENTS ✦ ADVERTS ✦
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </section>
+
+  <div class="text">
+    <div>
+
+    <div class="filter-row">
+      <a class="button active" data-filter="dgp">DGP Magazyn na Weekend</a>
+      <a class="button" data-filter="web">Web Design</a>
+      <a class="button" data-filter="illustrations">Illustrations</a>
+      <a class="button" data-filter="animations">Animations and Video</a>
+      <a class="button" data-filter="events">Events</a>
+      <a class="button" data-filter="advertising">Advertising</a>
+    </div>
+
+    <div id="gallery" class="gallery"></div>
+    <div id="web-section" class="web-section hidden"></div>
+    <div id="album-section" class="album-section hidden"></div>
+  </div>
+
+  <p class="footer">© Patryk Koch. 2026. All rights reserved.</p>
+</main>
+
+<!-- Album modal -->
+<div id="album-modal" class="album-modal">
+  <div class="album-modal-overlay"></div>
+  <div class="album-modal-box">
+    <button class="album-modal-close" id="album-modal-close" aria-label="Close">&times;</button>
+    <div class="album-modal-hero">
+      <img id="album-modal-hero-img" src="" alt="">
+    </div>
+    <div class="album-modal-footer">
+      <h2 class="album-modal-title" id="album-modal-title"></h2>
+      <p class="album-modal-desc" id="album-modal-desc"></p>
+      <div class="album-modal-links" id="album-modal-links"></div>
+      <div class="album-modal-thumbs" id="album-modal-thumbs"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Web project modal -->
+<div id="web-modal" class="web-modal">
+  <div class="web-modal-overlay"></div>
+  <div class="web-modal-box">
+    <button class="web-modal-close" id="web-modal-close" aria-label="Close">&times;</button>
+    <div class="web-modal-hero">
+      <img id="web-modal-hero-img" src="" alt="">
+    </div>
+    <div class="web-modal-body">
+      <div class="web-modal-tags" id="web-modal-tags"></div>
+      <h2 class="web-modal-title" id="web-modal-title"></h2>
+      <p class="web-modal-desc" id="web-modal-desc"></p>
+      <div class="web-modal-links" id="web-modal-links"></div>
+      <div class="web-modal-screens-label">Screens</div>
+      <div class="web-modal-screens" id="web-modal-screens"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox — handles both images and videos -->
+<div id="lightbox" class="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" alt="">
+  <video id="lightbox-video" controls playsinline></video>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  const lines = ["An editorial graphic designer."];
+  const el = document.getElementById("typewriter");
+  const cursor = document.querySelector(".cursor");
+  let lineIndex = 0, charIndex = 0, isDeleting = false;
+
+  function type() {
+    const current = lines[lineIndex];
+
+    if (!isDeleting) {
+      el.textContent = current.slice(0, ++charIndex);
+      if (charIndex === current.length) {
+        if (lineIndex === lines.length - 1) {
+          cursor.style.animation = "none";
+          cursor.style.opacity = "0";
+          return;
+        }
+        setTimeout(() => { isDeleting = true; type(); }, 1400); // pause before deleting
+        return;
+      }
+    } else {
+      el.textContent = current.slice(0, --charIndex);
+      if (charIndex === 0) {
+        isDeleting = false;
+        lineIndex++;
+        setTimeout(type, 1200); // pause before next line
+        return;
+      }
+    }
+
+    setTimeout(type, isDeleting ? 35 : 65); // delete faster than typing
+  }
+
+  setTimeout(type, 500);
+</script>
+</body>
+</html>
