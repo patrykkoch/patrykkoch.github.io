@@ -67,7 +67,7 @@ header, main {
 
 @media (max-width: 900px) {
   .gallery { grid-template-columns: repeat(3, 1fr);
-           padding: 0px;}
+           padding: 20px 0px 20px 0px;}
 }
 
 @media (max-width: 600px) {
