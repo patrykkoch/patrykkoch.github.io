@@ -452,13 +452,17 @@ header, main {
 .web-section {
   max-width: 1400px;
   margin: auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 .web-section.hidden { display: none; }
+
+@media (max-width: 600px) {
+  .web-section { padding: 20px 0px 20px 0px; }
+}
 
 /* Major project card */
 .wp-major {
@@ -869,13 +873,17 @@ header, main {
 .album-section {
   max-width: 1400px;
   margin: auto;
-  padding: 0 0 20px 0;
+  padding: 20px 20px 20px 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
 .album-section.hidden { display: none; }
+
+@media (max-width: 600px) {
+  .album-section { padding: 20px 0px 20px 0px; }
+}
 
 @media (max-width: 600px) {
   .album-section { grid-template-columns: 1fr; }
