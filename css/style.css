@@ -74,7 +74,7 @@ header, main {
   .gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 359px) {
   .gallery { grid-template-columns: repeat(1, 1fr); }
 }
 
@@ -185,7 +185,7 @@ a[href^="tel"] {
   .gallery.masonry { column-count: 2; }
 }
 
-@media (max-width: 389px) {
+@media (max-width: 390px) {
   .gallery.masonry { column-count: 1; }
 }
 
