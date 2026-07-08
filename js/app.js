@@ -17,7 +17,7 @@ async function loadGallery() {
   buildWebSection(webItems);
   buildAlbumSection(albumItems);
 
-  images.filter(i => i.type !== "web-project").forEach(item => {
+  images.filter(i => i.type !== "web-project" && i.type !== "album").forEach(item => {
     const div = document.createElement("div");
     div.className = "item";
     div.dataset.category = item.category || "all";
