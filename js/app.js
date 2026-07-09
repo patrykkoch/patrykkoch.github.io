@@ -17,6 +17,9 @@ async function loadGallery() {
   buildWebSection(webItems);
   buildAlbumSection(albumItems);
 
+  let dgpEagerCount = 0;
+  const DGP_EAGER_LIMIT = 10; // two rows of 5
+
   images.filter(i => i.type !== "web-project" && i.type !== "album").forEach(item => {
     const div = document.createElement("div");
     div.className = "item";
@@ -68,8 +71,11 @@ async function loadGallery() {
 
     } else {
       const image = document.createElement("img");
+      const isEager = item.category === "dgp" && dgpEagerCount < DGP_EAGER_LIMIT;
+      if (item.category === "dgp") dgpEagerCount++;
       image.src = item.thumb;
-      image.loading = "lazy";
+      image.loading = isEager ? "eager" : "lazy";
+      if (isEager) image.fetchPriority = "high";
       image.alt = item.title || "";
       image.dataset.full = item.full;
 
