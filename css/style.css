@@ -239,7 +239,7 @@ a[href^="tel"] {
 .item-video .video-poster {
   width: 100%;
   display: block;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: opacity 0.3s ease;
 }
 
